@@ -35,6 +35,18 @@
   --color-white: #fff;
 }
 
+/*global styling*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: all 1s;
+}
+
+section {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
 /*background-colors*/
 
 .bg-red-50 {
