@@ -686,12 +686,7 @@ section {
 }
 
 .ih-gradient-3 {
-  background: linear-gradient(
-    var(--deg),
-    var(--from-color),
-    var(--via-color),
-    var(--to-color)
-  );
+  background: linear-gradient(var(--deg), var(--from-color), var(--via-color), var(--to-color));
 }
 
 .ih-0-deg {
@@ -986,6 +981,9 @@ section {
 .nav-link {
   --bs-nav-link-color: var(--color-gray-500);
 }
+
+/*special styling*/
+
 .tab-content {
   padding-top: 1rem;
   max-height: 60vh;
@@ -993,23 +991,19 @@ section {
 .tab-pane#nutrition-tab-pane,
 .tab-pane#tips-tab-pane {
   overflow-y: auto;
-  max-height: 50vh;
+  max-height: 45vh;
 }
 
 .tab-pane#instructions-tab-pane {
-  min-height: 20vh;
-  max-height: 25vh;
+  min-height: 50vh;
+  max-height: 55vh;
   overflow: auto;
 }
 .tab-pane#ingredients-tab-pane {
-  min-height: 20vh;
-  max-height: 25vh;
+  min-height: 50vh;
+  max-height: 55vh;
   margin-block: 1rem;
-  background: linear-gradient(
-    90deg,
-    var(--color-orange-50),
-    var(--color-amber-50)
-  );
+  background: linear-gradient(90deg, var(--color-orange-50), var(--color-amber-50));
   border-radius: 15px;
   padding-inline: 1.5rem;
   padding-block: 1.5rem;
@@ -1017,17 +1011,20 @@ section {
   /* scrollbar-color: var(--color-orange-300);
   scrollbar-width: thin; */
 }
-.tab-pane::-webkit-scrollbar {
+.tab-pane::-webkit-scrollbar,
+.mealInfo::-webkit-scrollbar {
   width: 15px;
   border-radius: 8px;
 }
-.tab-pane::-webkit-scrollbar-track {
+.tab-pane::-webkit-scrollbar-track,
+.mealInfo::-webkit-scrollbar-track {
   background-color: var(--color-orange-100);
   border: 3px solid transparent;
   background-clip: content-box;
   border-radius: 100px;
 }
-.tab-pane::-webkit-scrollbar-thumb {
+.tab-pane::-webkit-scrollbar-thumb,
+.mealInfo::-webkit-scrollbar-thumb {
   background-color: var(--color-orange-200);
   border-radius: 8px;
   border: 3px solid transparent;
@@ -1035,12 +1032,10 @@ section {
   border-radius: 100px;
   transition: all 400ms ease-in-out;
 }
-.tab-pane::-webkit-scrollbar-thumb:hover {
+.tab-pane::-webkit-scrollbar-thumb:hover,
+.mealInfo::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-orange-300);
 }
-
-/*special styling*/
-
 .rating-position {
   left: 1.5rem;
   top: 1.5rem;
@@ -1741,11 +1736,7 @@ section {
     --hover-to-color: var(--color-white);
   }
   .ih-hover-gradient:hover {
-    background: linear-gradient(
-      var(--deg),
-      var(--hover-from-color),
-      var(--hover-to-color)
-    );
+    background: linear-gradient(var(--deg), var(--hover-from-color), var(--hover-to-color));
   }
   .ih-hover-gradient-3:hover {
     background: linear-gradient(
@@ -1799,5 +1790,14 @@ section {
   }
   .ih-rotate-self-360:hover {
     transform: rotate(360deg);
+  }
+  .tab-pane#instructions-tab-pane {
+    min-height: 20vh;
+    max-height: 25vh;
+    overflow: auto;
+  }
+  .tab-pane#ingredients-tab-pane {
+    min-height: 20vh;
+    max-height: 25vh;
   }
 }
