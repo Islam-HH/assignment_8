@@ -682,15 +682,11 @@ section {
 /*      utilities       */
 
 .ih-gradient {
-  background-image: linear-gradient(
-    var(--deg),
-    var(--from-color),
-    var(--to-color)
-  );
+  background: linear-gradient(var(--deg), var(--from-color), var(--to-color));
 }
 
 .ih-gradient-3 {
-  background-image: linear-gradient(
+  background: linear-gradient(
     var(--deg),
     var(--from-color),
     var(--via-color),
@@ -915,6 +911,63 @@ section {
 .ih-translate-x-40 {
   transform: translateX(-40%);
 }
+.ih-transition-100 {
+  transition: all 100ms;
+}
+.ih-transition-200 {
+  transition: all 200ms;
+}
+.ih-transition-300 {
+  transition: all 300ms;
+}
+.ih-transition-400 {
+  transition: all 400ms;
+}
+.ih-transition-500 {
+  transition: all 500ms;
+}
+.ih-transition-600 {
+  transition: all 600ms;
+}
+.ih-transition-700 {
+  transition: all 700ms;
+}
+.ih-transition-800 {
+  transition: all 800ms;
+}
+.ih-transition-900 {
+  transition: all 900ms;
+}
+.ih-transition-1000 {
+  transition: all 1000ms;
+}
+.ih-transition-1500 {
+  transition: all 1500ms;
+}
+.ih-transition-2000 {
+  transition: all 2000ms;
+}
+.ih-transition-2500 {
+  transition: all 2500ms;
+}
+.ih-transition-3000 {
+  transition: all 3000ms;
+}
+.ih-separator {
+  height: 1px;
+}
+.ih-w-80 {
+  width: 80%;
+}
+.ih-w-85 {
+  width: 85%;
+}
+.ih-w-90 {
+  width: 90%;
+}
+.ih-w-95 {
+  width: 95%;
+}
 
 /*bootstrap tuning*/
 
@@ -926,6 +979,64 @@ section {
 }
 .nav-link:focus {
   --bs-nav-link-hover-color: var(--color-gray-600);
+}
+.nav-link.active {
+  --bs-nav-underline-link-active-color: var(--color-orange-600);
+}
+.nav-link {
+  --bs-nav-link-color: var(--color-gray-500);
+}
+.tab-content {
+  padding-top: 1rem;
+  max-height: 60vh;
+}
+.tab-pane#nutrition-tab-pane,
+.tab-pane#tips-tab-pane {
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+.tab-pane#instructions-tab-pane {
+  min-height: 20vh;
+  max-height: 25vh;
+  overflow: auto;
+}
+.tab-pane#ingredients-tab-pane {
+  min-height: 20vh;
+  max-height: 25vh;
+  margin-block: 1rem;
+  background: linear-gradient(
+    90deg,
+    var(--color-orange-50),
+    var(--color-amber-50)
+  );
+  border-radius: 15px;
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+  overflow: auto;
+  /* scrollbar-color: var(--color-orange-300);
+  scrollbar-width: thin; */
+}
+.tab-pane::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 8px;
+}
+.tab-pane::-webkit-scrollbar-track {
+  background-color: var(--color-orange-100);
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: 100px;
+}
+.tab-pane::-webkit-scrollbar-thumb {
+  background-color: var(--color-orange-200);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: 100px;
+  transition: all 400ms ease-in-out;
+}
+.tab-pane::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-orange-300);
 }
 
 /*special styling*/
@@ -943,13 +1054,47 @@ section {
 }
 
 .food-img-position {
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.ingredients-number {
+  margin-right: 0.5rem;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-orange-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.instructions-number {
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: var(--color-white);
+  background-color: var(--color-orange-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  flex-shrink: 0;
 }
 
 @media (min-width: 992px) {
   .nav-link:hover {
     --bs-nav-link-hover-color: var(--color-orange-600);
+  }
+  .nav-underline .nav-link:hover {
+    --bs-nav-link-hover-color: var(--color-gray-700);
   }
   .ih-fs-lg-4 {
     font-size: 1.5rem !important;
@@ -1001,5 +1146,658 @@ section {
   }
   .ih-vw-lg-50 {
     height: 50vw;
+  }
+  .ih-min-vh-90 {
+    min-height: 90vh;
+  }
+  .ih-min-vh-lg-90 {
+    min-height: 90vh;
+  }
+  .ih-min-vh-lg-85 {
+    min-height: 85vh;
+  }
+  .ih-min-vh-lg-80 {
+    min-height: 80vh;
+  }
+  .ih-min-vh-lg-70 {
+    min-height: 70vh;
+  }
+  .ih-min-vh-lg-60 {
+    min-height: 60vh;
+  }
+  .ih-min-vh-lg-50 {
+    min-height: 50vh;
+  }
+  .ih-min-vw-lg-90 {
+    min-height: 90vw;
+  }
+  .ih-min-vw-lg-80 {
+    min-height: 80vw;
+  }
+  .ih-min-vw-lg-70 {
+    min-height: 70vw;
+  }
+  .ih-min-vw-lg-60 {
+    min-height: 60vw;
+  }
+  .ih-min-vw-lg-50 {
+    min-height: 50vw;
+  }
+  .ih-max-vh-lg-90 {
+    max-height: 90vh;
+  }
+  .ih-max-vh-lg-80 {
+    max-height: 80vh;
+  }
+  .ih-max-vh-lg-70 {
+    max-height: 70vh;
+  }
+  .ih-max-vh-lg-60 {
+    max-height: 60vh;
+  }
+  .ih-max-vh-lg-50 {
+    max-height: 50vh;
+  }
+  .ih-max-vw-lg-90 {
+    max-height: 90vw;
+  }
+  .ih-max-vw-lg-80 {
+    max-height: 80vw;
+  }
+  .ih-max-vw-lg-70 {
+    max-height: 70vw;
+  }
+  .ih-max-vw-lg-60 {
+    max-height: 60vw;
+  }
+  .ih-max-vw-lg-50 {
+    max-height: 50vw;
+  }
+
+  /*hover-colors*/
+
+  .ih-hover-text-red-50:hover {
+    color: var(--color-red-50);
+  }
+  .ih-hover-text-red-100:hover {
+    color: var(--color-red-100);
+  }
+  .ih-hover-text-red-500:hover {
+    color: var(--color-red-500);
+  }
+  .ih-hover-text-red-600:hover {
+    color: var(--color-red-600);
+  }
+  .ih-hover-text-red-800:hover {
+    color: var(--color-red-800);
+  }
+  .ih-hover-text-orange-50:hover {
+    color: var(--color-orange-50);
+  }
+  .ih-hover-text-orange-100:hover {
+    color: var(--color-orange-100);
+  }
+  .ih-hover-text-orange-200:hover {
+    color: var(--color-orange-200);
+  }
+  .ih-hover-text-orange-300:hover {
+    color: var(--color-orange-300);
+  }
+  .ih-hover-text-orange-500:hover {
+    color: var(--color-orange-500);
+  }
+  .ih-hover-text-orange-600:hover {
+    color: var(--color-orange-600);
+  }
+  .ih-hover-text-amber-50:hover {
+    color: var(--color-amber-50);
+  }
+  .ih-hover-text-amber-400:hover {
+    color: var(--color-amber-400);
+  }
+  .ih-hover-text-amber-600:hover {
+    color: var(--color-amber-600);
+  }
+  .ih-hover-text-yellow-50:hover {
+    color: var(--color-yellow-50);
+  }
+  .ih-hover-text-yellow-100:hover {
+    color: var(--color-yellow-100);
+  }
+  .ih-hover-text-yellow-400:hover {
+    color: var(--color-yellow-400);
+  }
+  .ih-hover-text-yellow-600:hover {
+    color: var(--color-yellow-600);
+  }
+  .ih-hover-text-green-100:hover {
+    color: var(--color-green-100);
+  }
+  .ih-hover-text-green-600:hover {
+    color: var(--color-green-600);
+  }
+  .ih-hover-text-green-700:hover {
+    color: var(--color-green-700);
+  }
+  .ih-hover-text-blue-100:hover {
+    color: var(--color-blue-100);
+  }
+  .ih-hover-text-blue-500:hover {
+    color: var(--color-blue-500);
+  }
+  .ih-hover-text-blue-600:hover {
+    color: var(--color-blue-600);
+  }
+  .ih-hover-text-blue-700:hover {
+    color: var(--color-blue-700);
+  }
+  .ih-hover-text-pink-100:hover {
+    color: var(--color-pink-100);
+  }
+  .ih-hover-text-pink-600:hover {
+    color: var(--color-pink-600);
+  }
+  .ih-hover-text-gray-50:hover {
+    color: var(--color-gray-50);
+  }
+  .ih-hover-text-gray-200:hover {
+    color: var(--color-gray-200);
+  }
+  .ih-hover-text-gray-500:hover {
+    color: var(--color-gray-500);
+  }
+  .ih-hover-text-gray-600:hover {
+    color: var(--color-gray-600);
+  }
+  .ih-hover-text-gray-700:hover {
+    color: var(--color-gray-700);
+  }
+  .ih-hover-text-gray-900:hover {
+    color: var(--color-gray-900);
+  }
+  .ih-hover-text-white:hover {
+    color: var(--color-white);
+  }
+  .ih-hover-red-50:hover {
+    background-color: var(--color-red-50);
+  }
+  .ih-hover-red-100:hover {
+    background-color: var(--color-red-100);
+  }
+  .ih-hover-red-500:hover {
+    background-color: var(--color-red-500);
+  }
+  .ih-hover-red-600:hover {
+    background-color: var(--color-red-600);
+  }
+  .ih-hover-red-800:hover {
+    background-color: var(--color-red-800);
+  }
+  .ih-hover-orange-50:hover {
+    background-color: var(--color-orange-50);
+  }
+  .ih-hover-orange-100:hover {
+    background-color: var(--color-orange-100);
+  }
+  .ih-hover-orange-200:hover {
+    background-color: var(--color-orange-200);
+  }
+  .ih-hover-orange-300:hover {
+    background-color: var(--color-orange-300);
+  }
+  .ih-hover-orange-500:hover {
+    background-color: var(--color-orange-500);
+  }
+  .ih-hover-orange-600:hover {
+    background-color: var(--color-orange-600);
+  }
+  .ih-hover-amber-50:hover {
+    background-color: var(--color-amber-50);
+  }
+  .ih-hover-amber-400:hover {
+    background-color: var(--color-amber-400);
+  }
+  .ih-hover-amber-600:hover {
+    background-color: var(--color-amber-600);
+  }
+  .ih-hover-yellow-50:hover {
+    background-color: var(--color-yellow-50);
+  }
+  .ih-hover-yellow-100:hover {
+    background-color: var(--color-yellow-100);
+  }
+  .ih-hover-yellow-400:hover {
+    background-color: var(--color-yellow-400);
+  }
+  .ih-hover-yellow-600:hover {
+    background-color: var(--color-yellow-600);
+  }
+  .ih-hover-green-100:hover {
+    background-color: var(--color-green-100);
+  }
+  .ih-hover-green-600:hover {
+    background-color: var(--color-green-600);
+  }
+  .ih-hover-green-700:hover {
+    background-color: var(--color-green-700);
+  }
+  .ih-hover-blue-100:hover {
+    background-color: var(--color-blue-100);
+  }
+  .ih-hover-blue-500:hover {
+    background-color: var(--color-blue-500);
+  }
+  .ih-hover-blue-600:hover {
+    background-color: var(--color-blue-600);
+  }
+  .ih-hover-blue-700:hover {
+    background-color: var(--color-blue-700);
+  }
+  .ih-hover-pink-100:hover {
+    background-color: var(--color-pink-100);
+  }
+  .ih-hover-pink-600:hover {
+    background-color: var(--color-pink-600);
+  }
+  .ih-hover-gray-50:hover {
+    background-color: var(--color-gray-50);
+  }
+  .ih-hover-gray-200:hover {
+    background-color: var(--color-gray-200);
+  }
+  .ih-hover-gray-500:hover {
+    background-color: var(--color-gray-500);
+  }
+  .ih-hover-gray-600:hover {
+    background-color: var(--color-gray-600);
+  }
+  .ih-hover-gray-700:hover {
+    background-color: var(--color-gray-700);
+  }
+  .ih-hover-gray-900:hover {
+    background-color: var(--color-gray-900);
+  }
+  .ih-hover-white:hover {
+    background-color: var(--color-white);
+  }
+  .ih-hover-pointer:hover {
+    cursor: pointer;
+  }
+
+  /*hover-gradient-stops*/
+
+  /* start-colors */
+
+  .hover-from-red-50:hover {
+    --hover-from-color: var(--color-red-50);
+  }
+  .hover-from-red-100:hover {
+    --hover-from-color: var(--color-red-100);
+  }
+  .hover-from-red-500:hover {
+    --hover-from-color: var(--color-red-500);
+  }
+  .hover-from-red-600:hover {
+    --hover-from-color: var(--color-red-600);
+  }
+  .hover-from-red-800:hover {
+    --hover-from-color: var(--color-red-800);
+  }
+  .hover-from-orange-50:hover {
+    --hover-from-color: var(--color-orange-50);
+  }
+  .hover-from-orange-100:hover {
+    --hover-from-color: var(--color-orange-100);
+  }
+  .hover-from-orange-200:hover {
+    --hover-from-color: var(--color-orange-200);
+  }
+  .hover-from-orange-300:hover {
+    --hover-from-color: var(--color-orange-300);
+  }
+  .hover-from-orange-500:hover {
+    --hover-from-color: var(--color-orange-500);
+  }
+  .hover-from-orange-600:hover {
+    --hover-from-color: var(--color-orange-600);
+  }
+  .hover-from-amber-50:hover {
+    --hover-from-color: var(--color-amber-50);
+  }
+  .hover-from-amber-400:hover {
+    --hover-from-color: var(--color-amber-400);
+  }
+  .hover-from-amber-600:hover {
+    --hover-from-color: var(--color-amber-600);
+  }
+  .hover-from-yellow-50:hover {
+    --hover-from-color: var(--color-yellow-50);
+  }
+  .hover-from-yellow-100:hover {
+    --hover-from-color: var(--color-yellow-100);
+  }
+  .hover-from-yellow-400:hover {
+    --hover-from-color: var(--color-yellow-400);
+  }
+  .hover-from-yellow-600:hover {
+    --hover-from-color: var(--color-yellow-600);
+  }
+  .hover-from-green-100:hover {
+    --hover-from-color: var(--color-green-100);
+  }
+  .hover-from-green-600:hover {
+    --hover-from-color: var(--color-green-600);
+  }
+  .hover-from-green-700:hover {
+    --hover-from-color: var(--color-green-700);
+  }
+  .hover-from-blue-100:hover {
+    --hover-from-color: var(--color-blue-100);
+  }
+  .hover-from-blue-500:hover {
+    --hover-from-color: var(--color-blue-500);
+  }
+  .hover-from-blue-600:hover {
+    --hover-from-color: var(--color-blue-600);
+  }
+  .hover-from-blue-700:hover {
+    --hover-from-color: var(--color-blue-700);
+  }
+  .hover-from-pink-100:hover {
+    --hover-from-color: var(--color-pink-100);
+  }
+  .hover-from-pink-600:hover {
+    --hover-from-color: var(--color-pink-600);
+  }
+  .hover-from-gray-50:hover {
+    --hover-from-color: var(--color-gray-50);
+  }
+  .hover-from-gray-200:hover {
+    --hover-from-color: var(--color-gray-200);
+  }
+  .hover-from-gray-500:hover {
+    --hover-from-color: var(--color-gray-500);
+  }
+  .hover-from-gray-600:hover {
+    --hover-from-color: var(--color-gray-600);
+  }
+  .hover-from-gray-700:hover {
+    --hover-from-color: var(--color-gray-700);
+  }
+  .hover-from-gray-900:hover {
+    --hover-from-color: var(--color-gray-900);
+  }
+  .hover-from-white:hover {
+    --hover-from-color: var(--color-white);
+  }
+
+  /* via-colors */
+
+  .hover-via-red-50:hover {
+    --hover-via-color: var(--color-red-50);
+  }
+  .hover-via-red-100:hover {
+    --hover-via-color: var(--color-red-100);
+  }
+  .hover-via-red-500:hover {
+    --hover-via-color: var(--color-red-500);
+  }
+  .hover-via-red-600:hover {
+    --hover-via-color: var(--color-red-600);
+  }
+  .hover-via-red-800:hover {
+    --hover-via-color: var(--color-red-800);
+  }
+  .hover-via-orange-50:hover {
+    --hover-via-color: var(--color-orange-50);
+  }
+  .hover-via-orange-100:hover {
+    --hover-via-color: var(--color-orange-100);
+  }
+  .hover-via-orange-200:hover {
+    --hover-via-color: var(--color-orange-200);
+  }
+  .hover-via-orange-300:hover {
+    --hover-via-color: var(--color-orange-300);
+  }
+  .hover-via-orange-500:hover {
+    --hover-via-color: var(--color-orange-500);
+  }
+  .hover-via-orange-600:hover {
+    --hover-via-color: var(--color-orange-600);
+  }
+  .hover-via-amber-50:hover {
+    --hover-via-color: var(--color-amber-50);
+  }
+  .hover-via-amber-400:hover {
+    --hover-via-color: var(--color-amber-400);
+  }
+  .hover-via-amber-600:hover {
+    --hover-via-color: var(--color-amber-600);
+  }
+  .hover-via-yellow-50:hover {
+    --hover-via-color: var(--color-yellow-50);
+  }
+  .hover-via-yellow-100:hover {
+    --hover-via-color: var(--color-yellow-100);
+  }
+  .hover-via-yellow-400:hover {
+    --hover-via-color: var(--color-yellow-400);
+  }
+  .hover-via-yellow-600:hover {
+    --hover-via-color: var(--color-yellow-600);
+  }
+  .hover-via-green-100:hover {
+    --hover-via-color: var(--color-green-100);
+  }
+  .hover-via-green-600:hover {
+    --hover-via-color: var(--color-green-600);
+  }
+  .hover-via-green-700:hover {
+    --hover-via-color: var(--color-green-700);
+  }
+  .hover-via-blue-100:hover {
+    --hover-via-color: var(--color-blue-100);
+  }
+  .hover-via-blue-500:hover {
+    --hover-via-color: var(--color-blue-500);
+  }
+  .hover-via-blue-600:hover {
+    --hover-via-color: var(--color-blue-600);
+  }
+  .hover-via-blue-700:hover {
+    --hover-via-color: var(--color-blue-700);
+  }
+  .hover-via-pink-100:hover {
+    --hover-via-color: var(--color-pink-100);
+  }
+  .hover-via-pink-600:hover {
+    --hover-via-color: var(--color-pink-600);
+  }
+  .hover-via-gray-50:hover {
+    --hover-via-color: var(--color-gray-50);
+  }
+  .hover-via-gray-200:hover {
+    --hover-via-color: var(--color-gray-200);
+  }
+  .hover-via-gray-500:hover {
+    --hover-via-color: var(--color-gray-500);
+  }
+  .hover-via-gray-600:hover {
+    --hover-via-color: var(--color-gray-600);
+  }
+  .hover-via-gray-700:hover {
+    --hover-via-color: var(--color-gray-700);
+  }
+  .hover-via-gray-900:hover {
+    --hover-via-color: var(--color-gray-900);
+  }
+  .hover-via-white:hover {
+    --hover-via-color: var(--color-white);
+  }
+
+  /* end-color*/
+
+  .hover-to-red-50:hover {
+    --hover-to-color: var(--color-red-50);
+  }
+  .hover-to-red-100:hover {
+    --hover-to-color: var(--color-red-100);
+  }
+  .hover-to-red-500:hover {
+    --hover-to-color: var(--color-red-500);
+  }
+  .hover-to-red-600:hover {
+    --hover-to-color: var(--color-red-600);
+  }
+  .hover-to-red-800:hover {
+    --hover-to-color: var(--color-red-800);
+  }
+  .hover-to-orange-50:hover {
+    --hover-to-color: var(--color-orange-50);
+  }
+  .hover-to-orange-100:hover {
+    --hover-to-color: var(--color-orange-100);
+  }
+  .hover-to-orange-200:hover {
+    --hover-to-color: var(--color-orange-200);
+  }
+  .hover-to-orange-300:hover {
+    --hover-to-color: var(--color-orange-300);
+  }
+  .hover-to-orange-500:hover {
+    --hover-to-color: var(--color-orange-500);
+  }
+  .hover-to-orange-600:hover {
+    --hover-to-color: var(--color-orange-600);
+  }
+  .hover-to-amber-50:hover {
+    --hover-to-color: var(--color-amber-50);
+  }
+  .hover-to-amber-400:hover {
+    --hover-to-color: var(--color-amber-400);
+  }
+  .hover-to-amber-600:hover {
+    --hover-to-color: var(--color-amber-600);
+  }
+  .hover-to-yellow-50:hover {
+    --hover-to-color: var(--color-yellow-50);
+  }
+  .hover-to-yellow-100:hover {
+    --hover-to-color: var(--color-yellow-100);
+  }
+  .hover-to-yellow-400:hover {
+    --hover-to-color: var(--color-yellow-400);
+  }
+  .hover-to-yellow-600:hover {
+    --hover-to-color: var(--color-yellow-600);
+  }
+  .hover-to-green-100:hover {
+    --hover-to-color: var(--color-green-100);
+  }
+  .hover-to-green-600:hover {
+    --hover-to-color: var(--color-green-600);
+  }
+  .hover-to-green-700:hover {
+    --hover-to-color: var(--color-green-700);
+  }
+  .hover-to-blue-100:hover {
+    --hover-to-color: var(--color-blue-100);
+  }
+  .hover-to-blue-500:hover {
+    --hover-to-color: var(--color-blue-500);
+  }
+  .hover-to-blue-600:hover {
+    --hover-to-color: var(--color-blue-600);
+  }
+  .hover-to-blue-700:hover {
+    --hover-to-color: var(--color-blue-700);
+  }
+  .hover-to-pink-100:hover {
+    --hover-to-color: var(--color-pink-100);
+  }
+  .hover-to-pink-600:hover {
+    --hover-to-color: var(--color-pink-600);
+  }
+  .hover-to-gray-50:hover {
+    --hover-to-color: var(--color-gray-50);
+  }
+  .hover-to-gray-200:hover {
+    --hover-to-color: var(--color-gray-200);
+  }
+  .hover-to-gray-500:hover {
+    --hover-to-color: var(--color-gray-500);
+  }
+  .hover-to-gray-600:hover {
+    --hover-to-color: var(--color-gray-600);
+  }
+  .hover-to-gray-700:hover {
+    --hover-to-color: var(--color-gray-700);
+  }
+  .hover-to-gray-900:hover {
+    --hover-to-color: var(--color-gray-900);
+  }
+  .hover-to-white:hover {
+    --hover-to-color: var(--color-white);
+  }
+  .ih-hover-gradient:hover {
+    background: linear-gradient(
+      var(--deg),
+      var(--hover-from-color),
+      var(--hover-to-color)
+    );
+  }
+  .ih-hover-gradient-3:hover {
+    background: linear-gradient(
+      var(--deg),
+      var(--hover-from-color),
+      var(--hover-via-color),
+      var(--hover-to-color)
+    );
+  }
+  .ih-scale-1:hover {
+    transform: scale(1.05);
+  }
+  .ih-scale-2:hover {
+    transform: scale(1.1);
+  }
+  .ih-scale-3:hover {
+    transform: scale(1.15);
+  }
+  .ih-scale-4:hover {
+    transform: scale(1.2);
+  }
+  .ih-scale-5:hover {
+    transform: scale(1.25);
+  }
+  :hover > .ih-rotate-child-45 {
+    transform: rotate(45deg);
+  }
+  :hover > .ih-rotate-child-90 {
+    transform: rotate(90deg);
+  }
+  :hover > .ih-rotate-child-180 {
+    transform: rotate(180deg);
+  }
+  :hover > .ih-rotate-child-270 {
+    transform: rotate(270deg);
+  }
+  :hover > .ih-rotate-child-360 {
+    transform: rotate(360deg);
+  }
+  .ih-rotate-self-45:hover {
+    transform: rotate(45deg);
+  }
+  .ih-rotate-self-90:hover {
+    transform: rotate(90deg);
+  }
+  .ih-rotate-self-180:hover {
+    transform: rotate(180deg);
+  }
+  .ih-rotate-self-270:hover {
+    transform: rotate(270deg);
+  }
+  .ih-rotate-self-360:hover {
+    transform: rotate(360deg);
   }
 }

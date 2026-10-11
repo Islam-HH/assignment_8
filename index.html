@@ -1,279 +1,359 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What’s For Dinner</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./css/fa.all.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body
-    class="ih-gradient-3 from-orange-50 via-amber-50 to-yellow-50 ih-90-deg"
-  >
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-fluid container-xl">
-          <a class="navbar-brand" href="#">
-            <div class="d-flex align-items-center">
-              <div
-                class="ih-square ih-w-h-5 rounded-circle text-white ih-gradient ih-90-deg from-orange-500 to-red-500 d-flex align-items-center justify-content-center me-3"
-              >
-                <i class="fa-solid fa-utensils fs-4"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What’s For Dinner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="./images/favicon.png" />
+  <link rel="stylesheet" href="./css/fa.all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="ih-gradient-3 from-orange-50 via-amber-50 to-yellow-50 ih-90-deg">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid container-xl">
+        <a class="navbar-brand" href="#">
+          <div class="d-flex align-items-center">
+            <div
+              class="ih-square ih-w-h-5 rounded-circle text-white ih-gradient ih-90-deg from-orange-500 to-red-500 d-flex align-items-center justify-content-center me-3">
+              <i class="fa-solid fa-utensils fs-4"></i>
+            </div>
+            <div>
+              <h4 class="mb-0 fw-semibold fs-5 ih-fs-lg-4">
+                What’s For Dinner
+              </h4>
+              <p class="ih-fs-8 ih-fs-lg-7 text-gray-500 mb-0">
+                Your daily meal inspiration
+              </p>
+            </div>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars mb-0"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav align-items-lg-center ms-auto">
+            <a class="nav-link text-gray-600" aria-current="page" href="#">
+              <i class="fa-solid fa-bookmark"></i>
+              <span class="d-lg-none">Saved Recipes</span>
+            </a>
+            <a class="nav-link text-gray-600" href="#"><i class="fa-solid fa-clock-rotate-left"></i>
+              <span class="d-lg-none">Recent</span></a>
+            <a class="nav-link text-gray-600" href="#"><i class="fa-solid fa-gear"></i>
+              <span class="d-lg-none">Settings</span></a>
+            <a class="nav-link text-gray-600" href="#">
+              <div class="d-flex align-items-center">
+                <div
+                  class="ih-square ih-w-h-4 rounded-circle border border-2 ih-border-orange-300 overflow-hidden me-2 me-lg-0">
+                  <img class="img-fluid" src="./images/avatar-1.jpg" alt="profile image" />
+                </div>
+                <span class="d-lg-none">Profile</span>
               </div>
-              <div>
-                <h4 class="mb-0 fw-semibold fs-5 ih-fs-lg-4">
-                  What’s For Dinner
-                </h4>
-                <p class="ih-fs-8 ih-fs-lg-7 text-gray-500 mb-0">
-                  Your daily meal inspiration
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="container-xl ih-px-7 pt-5 mt-5">
+      <div class="row ih-bg-white rounded ih-b-r-5 border ih-border-orange-100 overflow-hidden">
+        <div class="col-12 col-md-5 p-0 position-relative ih-min-vh-lg-85 ih-min-vh-50 ih-max-vh-80 overflow-hidden">
+          <div class="h-100">
+            <div class="overflow-hidden position-relative h-100">
+              <img id="mealImage" class="position-absolute food-img-position h-100" src="" alt="" />
+            </div>
+            <div
+              class="d-flex column-gap-1 align-items-center position-absolute rating-position rounded-pill ih-bg-white px-3 py-2 text-center">
+              <i class="fa-solid fa-star ih-text-yellow-400"></i>
+              <span id="mealRating" class="fw-bold ih-fs-7"></span>
+              <span id="reviewCount" class="ih-text-gray-500 ih-fs-8"></span>
+            </div>
+            <div
+              class="d-flex justify-content-around py-3 px-3 ih-bg-white rounded-2 position-absolute cook-details-position">
+              <div class="d-flex flex-column align-items-center justify-content-between">
+                <i class="fa-solid fa-clock ih-text-orange-500 fs-4 mb-lg-2 mb-1"></i>
+                <span class="ih-text-gray-500 ih-fs-8">Prep Time</span>
+                <span id="prepTime" class="fw-bold ih-fs-7"></span>
+              </div>
+              <div class="d-flex flex-column align-items-center justify-content-between">
+                <i class="fa-solid fa-fire-burner ih-text-red-500 fs-4 mb-lg-2 mb-1"></i>
+                <span class="ih-text-gray-500 ih-fs-8">Cook Time</span>
+                <span id="cookTime" class="fw-bold ih-fs-7"></span>
+              </div>
+              <div class="d-flex flex-column align-items-center justify-content-between">
+                <i class="fa-solid fa-users ih-text-blue-500 fs-4 mb-lg-2 mb-1"></i>
+                <span class="ih-text-gray-500 ih-fs-8">Servings</span>
+                <span id="servings" class="fw-bold ih-fs-7"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7 p-4 ih-max-vh-80 overflow-auto">
+          <div class="mb-3">
+            <span id="difficulty"
+              class="rounded-pill py-1 px-2 ih-bg-green-100 ih-text-green-700 fw-medium ih-fs-9 me-1">Easy</span>
+            <span id="category"
+              class="rounded-pill py-1 px-2 ih-bg-blue-100 ih-text-blue-700 fw-medium ih-fs-9">American</span>
+          </div>
+          <div>
+            <div class="row w-100 mx-0 mb-2">
+              <div class="col-9 px-0">
+                <h2 id="mealName" class="fs-1 fw-bold">Beef Tacos</h2>
+                <p id="description" class="ih-text-gray-500">Flavorful Mexican tacos with seasoned ground beef
                 </p>
               </div>
+              <div
+                class="d-flex col-3 justify-content-lg-end flex-column flex-lg-row px-0 align-items-end align-items-lg-center">
+                <div
+                  class="ih-square ih-w-h-5 ih-hover-pointer rounded ih-b-r-2 ih-bg-orange-100 ih-text-orange-600 ih-hover-orange-200 ih-transition-400 d-flex align-items-center justify-content-center mb-2 me-lg-2 mb-lg-0">
+                  <i class="fa-solid fa-bookmark"></i>
+                </div>
+                <div
+                  class="ih-square ih-w-h-5 ih-hover-pointer rounded ih-b-r-2 ih-bg-orange-100 ih-text-orange-600 ih-hover-orange-200 ih-transition-400 d-flex align-items-center justify-content-center">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </div>
+              </div>
             </div>
-          </a>
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fa-solid fa-bars mb-0"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav align-items-lg-center ms-auto">
-              <a class="nav-link text-gray-600" aria-current="page" href="#">
-                <i class="fa-solid fa-bookmark"></i>
-                <span class="d-lg-none">Saved Recipes</span>
-              </a>
-              <a class="nav-link text-gray-600" href="#"
-                ><i class="fa-solid fa-clock-rotate-left"></i>
-                <span class="d-lg-none">Recent</span></a
-              >
-              <a class="nav-link text-gray-600" href="#"
-                ><i class="fa-solid fa-gear"></i>
-                <span class="d-lg-none">Settings</span></a
-              >
-              <a class="nav-link text-gray-600" href="#">
-                <div class="d-flex align-items-center">
-                  <div
-                    class="ih-square ih-w-h-4 rounded-circle border border-2 ih-border-orange-300 overflow-hidden me-2 me-lg-0"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="./images/avatar-1.jpg"
-                      alt="profile image"
-                    />
+          </div>
+          <div id="timeWarning"
+            class="d-none d-flex align-items-center ih-bg-red-100 py-3 px-2 p-lg-3 rounded-3 border-start border-5 ih-border-red-600 mb-2">
+            <i class="fa-solid fa-warning me-2 me-lg-3 fs-5 ih-text-red-600"></i>
+            <div class="d-flex flex-column">
+              <span class="ih-fs-8 fw-semibold mb-1 ih-text-red-800">Extended Preparation Time</span>
+              <span class="ih-fs-9 ih-text-red-600">This recipe requires more than 45 minutes to prepare. Plan
+                accordingly!</span>
+            </div>
+          </div>
+          <div>
+            <ul
+              class="nav nav-underline align-items-center justify-content-center column-gap-4 row-gap-0 border-bottom m-auto border-1 ih-border-gray-200"
+              id="myTab" role="tablist">
+              <li class="nav-item py-1 fw-semibold" role="presentation">
+                <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab"
+                  data-bs-target="#ingredients-tab-pane" type="button" role="tab" aria-controls="ingredients-tab-pane"
+                  aria-selected="true">
+                  <i class="fa-solid fa-list-check me-2"></i>Ingredients
+                </button>
+              </li>
+              <li class="nav-item py-1 fw-semibold" role="presentation">
+                <button class="nav-link" id="instructions-tab" data-bs-toggle="tab"
+                  data-bs-target="#instructions-tab-pane" type="button" role="tab" aria-controls="instructions-tab-pane"
+                  aria-selected="false">
+                  <i class="fa-solid fa-book-open me-2"></i>Instructions
+                </button>
+              </li>
+              <li class="nav-item py-1 fw-semibold" role="presentation">
+                <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition-tab-pane"
+                  type="button" role="tab" aria-controls="nutrition-tab-pane" aria-selected="false">
+                  <i class="fa-solid fa-chart-pie me-2"></i>Nutrition
+                </button>
+              </li>
+              <li class="nav-item py-1 fw-semibold" role="presentation">
+                <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips-tab-pane"
+                  type="button" role="tab" aria-controls="tips-tab-pane" aria-selected="false">
+                  <i class="fa-solid fa-lightbulb me-2"></i>Chef’s Tips
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="ingredients-tab-pane" role="tabpanel"
+                aria-labelledby="ingredients-tab" tabindex="0">
+                <ul id="ingredientsList" class="list-unstyled">
+                  <!-- <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">1</div>
+                    <li> 2 tablespoons green curry paste</li>
                   </div>
-                  <span class="d-lg-none">Profile</span>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">2</div>
+                    <li>400ml coconut milk</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">3</div>
+                    <li>300g chicken breast, sliced</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">4</div>
+                    <li>1 red bell pepper, sliced</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">5</div>
+                    <li>100g green beans</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">6</div>
+                    <li>1 eggplant, cubed</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">7</div>
+                    <li>2 tablespoons fish sauce</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">8</div>
+                    <li>1 tablespoon palm sugar</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="ingredients-number">9</div>
+                    <li>Fresh Thai basil leaves</li>
+                  </div> -->
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="instructions-tab-pane" role="tabpanel" aria-labelledby="instructions-tab"
+                tabindex="0">
+                <ul id="instructionsList" class="list-unstyled">
+                  <!-- <div class="d-flex align-items-center mb-3">
+                    <div class="instructions-number">1</div>
+                    <li>Heat a large pot or wok over medium heat. Add curry paste and cook for 1 minute until fragrant.
+                    </li>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="instructions-number">2</div>
+                    <li>Add half the coconut milk and stir to combine with the curry paste.</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="instructions-number">3</div>
+                    <li>Add sliced chicken and cook until no longer pink, about 5 minutes.</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="instructions-number">4</div>
+                    <li>Add remaining coconut milk, vegetables, fish sauce, and palm sugar.</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="instructions-number">5</div>
+                    <li>Simmer for 15-20 minutes until vegetables are tender and sauce has thickened.</li>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="instructions-number">6</div>
+                    <li>Stir in fresh Thai basil leaves. Serve hot with jasmine rice.</li>
+                  </div> -->
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="nutrition-tab-pane" role="tabpanel" aria-labelledby="nutrition-tab"
+                tabindex="0">
+                <div class="row m-0">
+                  <div class="px-1 py-2 col-12 col-lg-6">
+                    <div class="d-flex align-items-center justify-content-between p-3 ih-bg-gray-50 rounded ih-b-r-4">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="me-2 rounded ih-b-r-2 ih-square ih-bg-orange-100 ih-w-h-5 d-flex align-items-center justify-content-center">
+                          <i class="fs-5 fa-solid fa-fire ih-text-orange-600"></i>
+                        </div>
+                        <span class="ih-fs-7 ih-text-gray-700">Calories</span>
+                      </div>
+                      <div><span id="mealCalories" class="fs-5 fw-bold ih-text-gray-900"></span></div>
+                    </div>
+                  </div>
+                  <div class="px-1 py-2 col-12 col-lg-6">
+                    <div class="d-flex align-items-center justify-content-between p-3 ih-bg-gray-50 rounded ih-b-r-4">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="me-2 rounded ih-b-r-2 ih-square ih-bg-blue-100 ih-w-h-5 d-flex align-items-center justify-content-center">
+                          <i class="fs-5 fa-solid fa-dumbbell ih-text-blue-600"></i>
+                        </div>
+                        <span class="ih-fs-7 ih-text-gray-700">Protein</span>
+                      </div>
+                      <div><span id="mealProtein" class="fs-5 fw-bold ih-text-gray-900"></span></div>
+                    </div>
+                  </div>
+                  <div class="px-1 py-2 col-12 col-lg-6">
+                    <div class="d-flex align-items-center justify-content-between p-3 ih-bg-gray-50 rounded ih-b-r-4">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="me-2 rounded ih-b-r-2 ih-square ih-bg-yellow-100 ih-w-h-5 d-flex align-items-center justify-content-center">
+                          <i class="fs-5 fa-solid fa-wheat-alt ih-text-yellow-600"></i>
+                        </div>
+                        <span class="ih-fs-7 ih-text-gray-700">Carbohydrates</span>
+                      </div>
+                      <div><span id="mealCarbs" class="fs-5 fw-bold ih-text-gray-900"></span></div>
+                    </div>
+                  </div>
+                  <div class="px-1 py-2 col-12 col-lg-6">
+                    <div class="d-flex align-items-center justify-content-between p-3 ih-bg-gray-50 rounded ih-b-r-4">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="me-2 rounded ih-b-r-2 ih-square ih-bg-red-100 ih-w-h-5 d-flex align-items-center justify-content-center">
+                          <i class="fs-5 fa-solid fa-droplet ih-text-red-600"></i>
+                        </div>
+                        <span class="ih-fs-7 ih-text-gray-700">Fat</span>
+                      </div>
+                      <div><span id="mealFat" class="fs-5 fw-bold ih-text-gray-900"></span></div>
+                    </div>
+                  </div>
+                  <div class="px-1 py-2 col-12 col-lg-6">
+                    <div class="d-flex align-items-center justify-content-between p-3 ih-bg-gray-50 rounded ih-b-r-4">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="me-2 rounded ih-b-r-2 ih-square ih-bg-green-100 ih-w-h-5 d-flex align-items-center justify-content-center">
+                          <i class="fs-5 fa-solid fa-seedling ih-text-green-600"></i>
+                        </div>
+                        <span class="ih-fs-7 ih-text-gray-700">Fiber</span>
+                      </div>
+                      <div><span id="mealFiber" class="fs-5 fw-bold ih-text-gray-900"></span></div>
+                    </div>
+                  </div>
+                  <div class="px-1 py-2 col-12 col-lg-6">
+                    <div class="d-flex align-items-center justify-content-between p-3 ih-bg-gray-50 rounded ih-b-r-4">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="me-2 rounded ih-b-r-2 ih-square  ih-bg-pink-100 ih-w-h-5 d-flex align-items-center justify-content-center">
+                          <i class="fs-5 fa-solid fa-cube ih-text-pink-600"></i>
+                        </div>
+                        <span class="ih-fs-7 ih-text-gray-700">Sodium</span>
+                      </div>
+                      <div><span id="mealSodium" class="fs-5 fw-bold ih-text-gray-900"></span></div>
+                    </div>
+                  </div>
                 </div>
-              </a>
+              </div>
+              <div class="tab-pane fade" id="tips-tab-pane" role="tabpanel" aria-labelledby="tips-tab" tabindex="0">
+                <div id="chefsTipsList">
+                  <!-- <div
+                    class="d-flex align-items-center mb-3 p-3 ih-bg-amber-50 rounded ih-b-r-3 border-start border-4 ih-border-amber-400">
+                    <i class="fa-solid fa-check-circle fs-5 me-2 ih-text-orange-500"></i>
+                    <p class="mb-0">Don't oversoak noodles or they'll be mushy</p>
+                  </div>
+                  <div
+                    class="d-flex align-items-center mb-3 p-3 ih-bg-amber-50 rounded ih-b-r-3 border-start border-4 ih-border-amber-400">
+                    <i class="fa-solid fa-check-circle fs-5 me-2 ih-text-orange-500"></i>
+                    <p class="mb-0">Cook on high heat for authentic wok flavor</p>
+                  </div>
+                  <div
+                    class="d-flex align-items-center mb-3 p-3 ih-bg-amber-50 rounded ih-b-r-3 border-start border-4 ih-border-amber-400">
+                    <i class="fa-solid fa-check-circle fs-5 me-2 ih-text-orange-500"></i>
+                    <p class="mb-0">Balance sweet, sour, and salty flavors</p>
+                  </div>
+                  <div
+                    class="d-flex align-items-center mb-3 p-3 ih-bg-amber-50 rounded ih-b-r-3 border-start border-4 ih-border-amber-400">
+                    <i class="fa-solid fa-check-circle fs-5 me-2 ih-text-orange-500"></i>
+                    <p class="mb-0">Prepare all ingredients before starting to cook</p>
+                  </div> -->
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="ih-separator ih-bg-gray-200 my-4"></div>
+          <div class="d-flex align-items-center justify-content-center">
+            <button type="button" onclick="displayRandomMeal()"
+              class="fs-6 ih-gradient from-orange-500 to-red-500 ih-90-deg border-0 rounded ih-b-r-3 py-3 px-3 ih-text-white ih-hover-gradient hover-from-orange-600 hover-to-red-600 ih-transition-400 ih-scale-1">
+              <i class="fa-solid fa-arrows-rotate me-1 ih-transition-400 ih-rotate-child-90"></i> Try Another
+              Recipe
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
-      <section class="container-xl ih-px-7 pt-5 mt-5">
-        <div
-          class="row ih-bg-white rounded ih-b-r-5 border ih-border-orange-100 overflow-hidden"
-        >
-          <div class="col-12 col-md-5 p-0 position-relative">
-            <div>
-              <div
-                class="overflow-hidden position-relative ih-vh-lg-85 ih-min-vh-50"
-              >
-                <img
-                  class="position-absolute food-img-position"
-                  src="./images/avatar-1.jpg"
-                  alt=""
-                />
-              </div>
-              <div
-                class="d-flex column-gap-1 align-items-center position-absolute rating-position rounded-pill ih-bg-white px-3 py-2 text-center"
-              >
-                <i class="fa-solid fa-star ih-text-yellow-400"></i>
-                <span class="fw-bold ih-fs-7">4.7</span>
-                <span class="ih-text-gray-500 ih-fs-8">(389 reviews)</span>
-              </div>
-              <div
-                class="d-flex justify-content-around py-3 px-3 ih-bg-white rounded-2 position-absolute cook-details-position"
-              >
-                <div
-                  class="d-flex flex-column align-items-center justify-content-between"
-                >
-                  <i
-                    class="fa-solid fa-clock ih-text-orange-500 fs-4 mb-lg-2 mb-1"
-                  ></i>
-                  <span class="ih-text-gray-500 ih-fs-8">Prep Time</span>
-                  <span class="fw-bold ih-fs-7">20 min</span>
-                </div>
-                <div
-                  class="d-flex flex-column align-items-center justify-content-between"
-                >
-                  <i
-                    class="fa-solid fa-fire-burner ih-text-red-500 fs-4 mb-lg-2 mb-1"
-                  ></i>
-                  <span class="ih-text-gray-500 ih-fs-8">Cook Time</span>
-                  <span class="fw-bold ih-fs-7">30 min</span>
-                </div>
-                <div
-                  class="d-flex flex-column align-items-center justify-content-between"
-                >
-                  <i
-                    class="fa-solid fa-users ih-text-blue-500 fs-4 mb-lg-2 mb-1"
-                  ></i>
-                  <span class="ih-text-gray-500 ih-fs-8">Servings</span>
-                  <span class="fw-bold ih-fs-7">4 people</span>
-                </div>
-              </div>
-            </div>
-            <div></div>
-          </div>
-          <div class="col-12 col-md-7">
-            <div>
-              <span
-                class="rounded-pill py-1 px-2 ih-bg-green-100 ih-text-green-700 fw-medium ih-fs-9"
-                >Easy</span
-              >
-              <span
-                class="rounded-pill py-1 px-2 ih-bg-blue-100 ih-text-blue-700 fw-medium ih-fs-9"
-                >American</span
-              >
-            </div>
-            <div>
-              <div>
-                <h2>Beef Tacos</h2>
-                <p>Flavorful Mexican tacos with seasoned ground beef</p>
-              </div>
-              <div>
-                <div><i class="fa-solid fa-book-bookmark"></i></div>
-                <div><i class="fa-solid fa-share-nodes"></i></div>
-              </div>
-            </div>
-            <div>
-              <ul
-                class="nav nav-underline align-items-center justify-content-center w-md-80 column-gap-md-5 row-gap-0 gap-xl-5 border-bottom m-auto px-5 border-1"
-                id="myTab"
-                role="tablist"
-              >
-                <li class="nav-item py-1 fw-semibold" role="presentation">
-                  <button
-                    class="nav-link active"
-                    id="ingredients-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#ingredients-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="ingredients-tab-pane"
-                    aria-selected="true"
-                  >
-                    <i class="fa-solid fa-list-check me-2"></i>Ingredients
-                  </button>
-                </li>
-                <li class="nav-item py-1 fw-semibold" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="instructions-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#instructions-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="instructions-tab-pane"
-                    aria-selected="false"
-                  >
-                    <i class="fa-solid fa-book-open me-2"></i>Instructions
-                  </button>
-                </li>
-                <li class="nav-item py-1 fw-semibold" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="nutrition-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#nutrition-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="nutrition-tab-pane"
-                    aria-selected="false"
-                  >
-                    <i class="fa-solid fa-chart-pie me-2"></i>Nutrition
-                  </button>
-                </li>
-                <li class="nav-item py-1 fw-semibold" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="tips-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#tips-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="tips-tab-pane"
-                    aria-selected="false"
-                  >
-                    <i class="fa-solid fa-lightbulb me-2"></i>Chef’s Tips
-                  </button>
-                </li>
-              </ul>
-              <div class="tab-content" id="myTabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="ingredients-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="ingredients-tab"
-                  tabindex="0"
-                >
-                  Ingredients
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="instructions-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="instructions-tab"
-                  tabindex="0"
-                >
-                  Instructions
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="nutrition-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="nutrition-tab"
-                  tabindex="0"
-                >
-                  Nutrition
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="tips-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="tips-tab"
-                  tabindex="0"
-                >
-                  Chef’s Tips
-                </div>
-              </div>
-            </div>
-            <div></div>
-            <div>
-              <button>
-                <i></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/index.js"></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
 </html>
